@@ -1,17 +1,22 @@
-# mcp-gdacs
+# @pipeworx/gdacs
 
-GDACS MCP — Global Disaster Alert and Coordination System.
+[GDACS](https://www.gdacs.org) MCP — Global Disaster Alert and Coordination System: real-time alerts for earthquakes, tropical cyclones, floods, volcanoes, droughts, wildfires. Keyless.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
-| Tool | Description |
-|------|-------------|
-| `events` | List disaster events. |
-| `event` | Single event detail. |
-| `geojson` | Current alerts as GeoJSON. |
-| `rss` | Raw RSS feed (XML text). |
+- `events(event_type?, alert_level?, from?, to?, country_iso3?)` — list disaster events
+- `event(event_type, event_id, episode_id?)` — single event detail
+- `geojson(event_type?, alert_level?)` — current alerts as GeoJSON
+- `rss()` — raw RSS feed (xml as text)
+
+`event_type` is one of: `EQ` (earthquake), `TC` (tropical cyclone), `FL` (flood), `VO` (volcano), `DR` (drought), `WF` (wildfire).
+`alert_level` is `Green` | `Orange` | `Red`.
+
+## Data source
+
+`https://www.gdacs.org/gdacsapi/api/`
 
 ## Quick Start
 
@@ -27,7 +32,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -51,7 +56,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
