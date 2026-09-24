@@ -1,20 +1,32 @@
 {
   "name": "@pipeworx/mcp-gdacs",
-  "version": "0.1.0",
-  "description": "GDACS — Global Disaster Alert & Coordination System (EQ/TC/FL/VO/DR/WF)",
+  "version": "0.1.1",
+  "description": "GDACS MCP — Global Disaster Alert and Coordination System.",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "bin": {
+    "mcp-gdacs": "bin/cli.js"
+  },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "gdacs"],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pipeworx-io/mcp-gdacs"
+    "url": "git+https://github.com/pipeworx-io/mcp-gdacs.git"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
   "devDependencies": {
-    "typescript": "^5.7.0"
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-142f8c0a40ef38cd39d3200f554052467daf34fdbc4e38fd23fa89a39df03685",
+    "sourceCommit": "76aa8f5d9b5dc2f665563030647c68e661478864"
   }
 }

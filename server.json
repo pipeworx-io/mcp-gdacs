@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.pipeworx-io/gdacs",
   "title": "Gdacs",
-  "description": "GDACS — Global Disaster Alert & Coordination System (EQ/TC/FL/VO/DR/WF)",
-  "version": "0.1.0",
+  "description": "GDACS MCP — Global Disaster Alert and Coordination System.",
+  "version": "0.1.1",
   "websiteUrl": "https://pipeworx.io/packs/gdacs",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-gdacs",
