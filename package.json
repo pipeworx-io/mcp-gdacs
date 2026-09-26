@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-gdacs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "GDACS MCP — Global Disaster Alert and Coordination System.",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-142f8c0a40ef38cd39d3200f554052467daf34fdbc4e38fd23fa89a39df03685",
-    "sourceCommit": "76aa8f5d9b5dc2f665563030647c68e661478864"
+    "sourceHash": "v1-a17ccb4e1a5983a903d958f67e68f00b91a5ab830c398049e2e8431fec709ab6",
+    "sourceCommit": "91681e9a4a137fa0051d58e32f38c64b6334af5c"
   }
 }
