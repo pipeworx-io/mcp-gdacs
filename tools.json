@@ -1,0 +1,75 @@
+[
+  {
+    "name": "events",
+    "description": "Search and list GDACS global disaster events filterable by type (EQ=earthquake, TC=tropical cyclone, FL=flood, VO=volcano, DR=drought, WF=wildfire), alert level (Green/Orange/Red), ISO date range, and ISO3 country code.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "event_type": {
+          "type": "string",
+          "description": "EQ | TC | FL | VO | DR | WF"
+        },
+        "alert_level": {
+          "type": "string",
+          "description": "Green | Orange | Red"
+        },
+        "from": {
+          "type": "string",
+          "description": "ISO date."
+        },
+        "to": {
+          "type": "string",
+          "description": "ISO date."
+        },
+        "country_iso3": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  {
+    "name": "event",
+    "description": "Fetch full detail for a single GDACS disaster event by event_type (EQ/TC/FL/VO/DR/WF) and event_id; optionally narrow to a specific episode_id. Returns event metadata, impact estimates, and geometry.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "event_type": {
+          "type": "string"
+        },
+        "event_id": {
+          "type": "string"
+        },
+        "episode_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "event_type",
+        "event_id"
+      ]
+    }
+  },
+  {
+    "name": "geojson",
+    "description": "Current alerts as GeoJSON.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "event_type": {
+          "type": "string"
+        },
+        "alert_level": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  {
+    "name": "rss",
+    "description": "Raw RSS feed (XML text).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  }
+]
